@@ -1,0 +1,100 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>绝区零 账号切换器</title>
+<link rel="stylesheet" type="text/css" href="def.css" />
+<style>
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+    width: 100%;
+	background-repeat: repeat;
+	background-size: contain;
+	text-shadow: 1px 1px 2px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
+}
+</style>
+</head>
+<body>
+
+<div>
+<div id="vers"  style="display:none"></div>
+当前最新版本为：v1.2.0
+【
+<a href="https://img.clso.fun/file/MihoyoAccountSwitcher.7z">直链</a> | 
+<a href="https://www.lanzoub.com/ifZYA2nay3fi" target="_blank">蓝奏</a> |
+<a href="https://files.catbox.moe/1zofac.7z">catbox</a>
+】
+</div>
+
+<p></p>
+
+<div>
+<a href="help.htm" title="按F1会重新定位到主页">使用方法</a> | <a href="update.htm">更新日志</a> | <a href="https://discord.gg/GKqNePSNYP" target="_blank" title="点击加入官方Discord群组">Discord</a> | <a href="javascript:rndwp()" oncontextmenu="window.external.openWPDir()" title="点击切换壁纸，右击定位到壁纸文件夹">刷新壁纸</a><br/>
+<a href="https://wiki.clso.fun/game/崩坏：星穹铁道" target="_blank" title="https://wiki.clso.fun/game/绝区零">绝区零百科：常用工具、攻略指南、兑换码</a><br/>
+
+<div id="lnks" style="display:none"></div>
+<br/>
+<br/>
+</div>
+
+<div>
+广告位招商<img src="https://blog.clso.fun/usr/plugins/Smilies/clso/b_huaji.png" />
+</div>
+
+<div>
+友情链接虚位以待<img src="https://blog.clso.fun/usr/plugins/Smilies/clso/b_huaji.png" />
+</div>
+
+<hr />
+<!--
+<div>
+兑换码
+<iframe src="#" style="height:500px;width:100%;" frameborder="0" scrolling="no"></iframe>
+</div>
+-->
+
+<script type="text/javascript">
+var index = 3;
+if(window.external.version){
+	vers.innerText = "您的程序版本为：v"+window.external.version;
+	vers.style.display = "block";
+}
+
+var rndimg = [
+	"https://images.alphacoders.com/123/1234309.png",
+	"https://images8.alphacoders.com/122/1225458.jpg",
+	"https://images6.alphacoders.com/118/1187333.jpg",
+	"https://images7.alphacoders.com/131/1312361.jpg",
+	"https://images8.alphacoders.com/130/1308257.jpg",
+	"https://images4.alphacoders.com/130/1305687.jpg",
+	"https://images3.alphacoders.com/130/1301315.jpg",
+];
+function rndwp(){
+	if(window.external.hasWallpaper(index)){
+		var rndurl = window.external.rndWallpaper(index);
+	} else {
+		var rndurl = rndimg[Math.floor(Math.random()*rndimg.length)];
+	}
+	document.body.style.backgroundImage = "url('"+rndurl+"')";
+}
+rndwp();
+
+if(window.external.hasLnk(index)){
+	lnks.innerHTML = window.external.getLnkHtml(index);
+	lnks.style.display = "block";
+}
+</script>
+
+<!--
+<script type="text/javascript">
+var _paq = window._paq || [];_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function() {var u="https://clso.fun/labs/wtj/";_paq.push(['setTrackerUrl', u+'wtj.php']);_paq.push(['setSiteId', '4']);var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'wtj.js'; s.parentNode.insertBefore(g,s);})();
+</script>
+-->
+</body>
+</html>
