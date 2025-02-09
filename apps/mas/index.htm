@@ -77,7 +77,7 @@ var rndimg = [
 ];
 
 function rndwp(){
-	if(window.external.hasWallpaper && window.external.hasWallpaper(index)){
+	if(window.external.hasWallpaper(index)){
 		var rndurl = window.external.rndWallpaper(index);
 	} else {
 		var rndurl = rndimg[Math.floor(Math.random()*rndimg.length)];
@@ -86,7 +86,7 @@ function rndwp(){
 }
 rndwp();
 
-if(window.external.hasLnk && window.external.hasLnk(index)){
+if(window.external.hasLnk(index)){
 	lnks.innerHTML = window.external.getLnkHtml(index);
 	lnks.style.display = "block";
 }
