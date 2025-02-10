@@ -1,10 +1,8 @@
 ﻿html, body {
-	height: 100%;
 	margin:0;
 	padding:0;
 }
 body {
-	width: 100%;
     font: 16px Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,PingFang SC,WenQuanYi Micro Hei,sans-serif;
     padding: 10px;
     color: #444;
