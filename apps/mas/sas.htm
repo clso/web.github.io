@@ -6,25 +6,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>崩坏：星穹铁道 账号切换器</title>
 <link rel="stylesheet" type="text/css" href="def.css" />
-<style>
-html, body {
-	height: 100%;
-	margin:0;
-	padding:0;
+<script src="def.js"></script>
+<script>
+var index = 2;
+
+window.openWPDir = function(){
+	if(exthas('openWPDir')) {
+		try {
+		  window.external.openWPDir(index);
+		} catch (error) {
+		  window.external.openWPDir();
+		}
+	}
 }
-body{
-    width: 100%;
-	background-repeat: repeat;
-	background-size: contain;
-	text-shadow: 1px 1px 2px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
-}
-</style>
+
+</script>
 </head>
 <body>
 <div style="padding:10px">
 
 <div>
-<a href="help.htm" title="按F1会重新定位到主页">使用方法</a> | <a href="update.htm">更新日志</a> | <a href="https://discord.gg/GKqNePSNYP" target="_blank" title="点击加入官方Discord群组">Discord</a> | <a href="javascript:rndwp()" oncontextmenu="window.external.openWPDir()" title="点击切换壁纸，右击定位到壁纸文件夹">刷新壁纸</a><br/>
+<a href="help.htm" title="按F1会重新定位到主页">使用方法</a> | <a href="update.htm">更新日志</a> | <a href="https://discord.gg/GKqNePSNYP" target="_blank" title="点击加入官方Discord群组">Discord</a> | <a href="javascript:rndwp()" oncontextmenu="openWPDir()" title="点击切换壁纸，右击定位到壁纸文件夹">刷新壁纸</a><br/>
 <a href="https://wiki.clso.fun/game/崩坏：星穹铁道" target="_blank" title="https://wiki.clso.fun/game/崩坏：星穹铁道">崩铁百科：常用工具、攻略指南、兑换码</a><br/>
 
 <div id="lnks" style="display:none"></div>
@@ -49,8 +51,6 @@ body{
 -->
 
 <script type="text/javascript">
-var index = 2;
-
 var rndimg = [
 	"https://images.alphacoders.com/123/1234309.png",
 	"https://images8.alphacoders.com/122/1225458.jpg",
@@ -62,17 +62,26 @@ var rndimg = [
 ];
 
 function rndwp(){
-	if(window.external.hasWallpaper(index)){
-		var rndurl = window.external.rndWallpaper(index);
+	var rndurl;
+	if(exthas('hasWallpaper')){
+		try{
+			rndurl = window.external.rndWallpaper(index);
+		}catch(e){
+			rndurl = window.external.rndWallpaper();
+		}
 	} else {
-		var rndurl = rndimg[Math.floor(Math.random()*rndimg.length)];
+		rndurl = rndimg[Math.floor(Math.random()*rndimg.length)];
 	}
 	document.body.style.backgroundImage = "url('"+rndurl+"')";
 }
 rndwp();
 
-if(window.external.hasLnk(index)){
-	lnks.innerHTML = window.external.getLnkHtml(index);
+if(exthas('hasLnk')){
+	try{
+		lnks.innerHTML = window.external.getLnkHtml(index);
+	}catch(e){
+		lnks.innerHTML = window.external.getLnkHtml();
+	}
 	lnks.style.display = "block";
 }
 </script>
