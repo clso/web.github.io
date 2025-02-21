@@ -18,6 +18,8 @@ body{
 	background-size: contain;
 	text-shadow: 1px 1px 2px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
 }
+#main{padding:10px}
+.hide{display:none}
 </style>
 <script src="def.js"></script>
 <script>
@@ -31,17 +33,17 @@ window.openWPDir = function(){
 		  window.external.openWPDir();
 		}
 	}
-}
+};
 </script>
 </head>
 <body>
-<div style="padding:10px">
+<div id="main">
 
 <div>
 <a href="help.htm" title="按F1会重新定位到主页">使用方法</a> | <a href="update.htm">更新日志</a> | <a href="https://discord.gg/GKqNePSNYP" target="_blank" title="点击加入官方Discord群组">Discord</a> | <a href="javascript:rndwp()" oncontextmenu="openWPDir()" title="点击切换壁纸，右击定位到壁纸文件夹">刷新壁纸</a><br/>
 <a href="https://wiki.clso.fun/game/崩坏：星穹铁道" target="_blank" title="https://wiki.clso.fun/game/绝区零">绝区零百科：常用工具、攻略指南、兑换码</a><br/>
 
-<div id="lnks" style="display:none"></div>
+<div id="lnks" class="hide"></div>
 <br/>
 <br/>
 </div>
