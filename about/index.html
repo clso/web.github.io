@@ -73,5 +73,12 @@ src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 -->
 
 </div>
+
+<script>
+(function(){
+var links = document.getElementsByTagName("a");
+for(var i = 0; i < links.length; i++) if(!links[i].title) links[i].title=links[i].href;
+})();
+</script>
 </body>
 </html>
