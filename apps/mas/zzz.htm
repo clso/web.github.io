@@ -98,6 +98,11 @@ if(exthas('hasLnk')){
 	}
 	lnks.style.display = "block";
 }
+
+(function(){
+var links = document.getElementsByTagName("a");
+for(var i = 0; i < links.length; i++) if(!links[i].title) links[i].title=links[i].href;
+})();
 </script>
 
 <!--

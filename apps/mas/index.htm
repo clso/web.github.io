@@ -43,14 +43,17 @@ window.openWPDir = function(){
 <a href="help.htm" title="按F1会重新定位到主页">使用方法</a> | <a href="update.htm">更新日志</a> | <a href="https://discord.gg/GKqNePSNYP" target="_blank" title="点击加入官方Discord群组">Discord</a> | <a href="javascript:rndwp()" oncontextmenu="openWPDir()" title="点击切换壁纸，右击定位到壁纸文件夹">刷新壁纸</a><br/>
 <a href="https://wiki.clso.fun/game/原神" target="_blank" title="https://wiki.clso.fun/game/原神">原神百科：常用工具、攻略指南、兑换码</a><br/>
 
-<p></p>
+<p style="color:red">
+注意：原神、星铁最新版本更改了登录方式，当前已无法使用注册表来快速切换账号了。<br />
+所以……此工具目前只能作为一个第三方启动器来使用了，以后应该也不会再积极更新了。
+</p>
 <div>
 <div id="vers" class="hide"></div>
-当前最新版本为：v1.2.4
+当前最新版本为：v1.2.5
 【
-<a href="https://img.clso.fun/file/1740115061544_MihoyoAccountSwitcher.7z">直链</a> | 
-<a href="https://www.lanzoub.com/ib1nr2ogij5a" target="_blank">蓝奏</a> |
-<a href="https://files.catbox.moe/u8muzj.7z">catbox</a>
+<a href="https://img.clso.fun/file/1745406237842_MihoyoAccountSwitcher.7z">直链</a> | 
+<a href="https://www.lanzoub.com/iCM7j2u9mk5e" target="_blank">蓝奏</a> |
+<a href="https://files.catbox.moe/ueemwx.7z">catbox</a>
 】
 </div>
 
@@ -116,6 +119,11 @@ if(exthas('hasLnk')){
 	}
 	lnks.style.display = "block";
 }
+
+(function(){
+var links = document.getElementsByTagName("a");
+for(var i = 0; i < links.length; i++) if(!links[i].title) links[i].title=links[i].href;
+})();
 </script>
 
 <!--
